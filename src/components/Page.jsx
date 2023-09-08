@@ -1,4 +1,5 @@
 import { DataContext } from "../contexts/DataContext"
+import { Footer } from "./Footer"
 import { Header } from "./Header"
 import { Post } from './Post'
 
@@ -16,6 +17,7 @@ export const Page = () => {
                 <div className="flex flex-col items-center justify-center gap-2 ">
                     <Header />
                     {context.state.posts.map((item) => <Post key={item.posts.id} title={item.posts.title} post={item.posts.post} />)}
+                    <Footer />
                 </div>
 
             </>
